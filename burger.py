@@ -10,6 +10,8 @@ import constants
 
 def main():
     # Declaring variables.
+    # Allowing for the different prices of a burger to be under 1 variable.
+    # Source: https://note.nkmk.me/en/python-multi-variables-values/#:~:text=You%20can%20assign%20multiple%20values,by%20separating%20them%20with%20commas%20%2C%20.&text=You%20can%20assign%20values%20to%20more%20than%20three%20variables%2C%20and,data%20types%20to%20those%20variables
     burger_prices = [0.00, 5.00, 7.00]
     fries_price = 3.00
     drink_price = 1.00
@@ -27,6 +29,9 @@ def main():
     print("1 - Small")
     print("2 - Large")
     print("Enter the number representing the option you would like to select")
+    print(
+        "If you do not want to order a burger than press enter to proceed to the other menu options."
+    )
 
     # Getting user input for burger size.
     burger_size = input("Enter your size of burger: ")
@@ -53,6 +58,9 @@ def main():
     print("1 - Yes")
     print("2 - No")
     print("Enter the number representing the option you would like to select.")
+    print(
+        "If you do not want to order fries than press enter to proceed to the other menu options."
+    )
 
     # Getting user input for fries.
     fries_choice = input("Enter your choice for fries: ")
@@ -78,6 +86,9 @@ def main():
     print("1 - Yes")
     print("2 - No")
     print("Enter the number representing the option you would like to select.")
+    print(
+        "If you do not want to order a drink than press enter to proceed to the other menu options."
+    )
 
     # Getting user input for a drink.
     drink = input("Enter your choice for a drink: ")
@@ -98,7 +109,7 @@ def main():
     except:
         print("Invalid choice for a drink.")
 
-    # Calculating the subtotal, using if, elif and else statements for the serval possibilities.
+    # Calculating the subtotal, using if, elif and else statements for the several possibilities.
     # If the user wants a small burger, with fries and a drink.
     if burger_size_as_integer == 1 and fries_as_integer == 1 and drink_as_integer == 1:
         subtotal = burger_price + fries_price + drink_price
@@ -155,7 +166,7 @@ def main():
     # Calculating total.
     total = subtotal + tax
 
-    # Displaying subtotal, tax, and total.
+    # Displaying the subtotal, tax, and total.
     print("Subtotal: ${:.2f}".format(subtotal))
     print("Tax: ${:.2f}".format(tax))
     print("Total: ${:.2f}".format(total))
